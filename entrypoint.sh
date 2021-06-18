@@ -12,6 +12,9 @@ curl -L -o /srv/packagr/packagr-publishr $asset_url
 # make publishr executable
 chmod +x /srv/packagr/packagr-publishr
 
+if [[ ! -z "${CUSTOM_WORKING_DIRECTORY}" ]]; then
+  cd "${CUSTOM_WORKING_DIRECTORY}"
+fi
 
 echo "Starting Publishr $1"
 packagr-publishr start --scm github --package_type golang

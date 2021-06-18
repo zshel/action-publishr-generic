@@ -12,6 +12,10 @@ inputs:
   upload_assets:
     description: 'Assets to upload'
     required: false
+  cwd:
+    description: 'Working Directory'
+    required: false
+    default: ''
 outputs:
   version: # id of output
     description: 'Version that was written to files'
