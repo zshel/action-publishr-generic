@@ -13,6 +13,7 @@ curl -L -o /srv/packagr/packagr-publishr $asset_url
 chmod +x /srv/packagr/packagr-publishr
 
 if [[ ! -z "${CUSTOM_WORKING_DIRECTORY}" ]]; then
+  echo "using custom dir: ${CUSTOM_WORKING_DIRECTORY}"
   cd "${CUSTOM_WORKING_DIRECTORY}"
 fi
 
