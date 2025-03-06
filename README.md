@@ -1,4 +1,4 @@
-# action-publishr-go
+# action-publishr-generric
 
 <p align="center">
   <a href="https://github.com/PackagrIO/docs">
@@ -6,7 +6,7 @@
   </a>
 </p>
 
-Github Action that allows you to push commits, publish artifacts, generate a changelog & create a releaseGithub Action that allows you to commit local changes & tag Go repositories
+Github Action that allows you to push commits, publish artifacts, generate a changelog & create a releaseGithub Action that allows you to commit local changes & tag generic repositories
 
 # Documentation
 Full documentation is available at [PackagrIO/docs](https://github.com/PackagrIO/docs)
@@ -31,7 +31,7 @@ jobs:
 
       - name: Publish Release
         id: publish
-        uses: packagrio/action-publishr-go@master
+        uses: packagrio/action-publishr-generic@master
         env:
           # This is necessary in order to push a commit to the repo
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged

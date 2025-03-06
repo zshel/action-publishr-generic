@@ -18,4 +18,4 @@ if [[ ! -z "${CUSTOM_WORKING_DIRECTORY}" ]]; then
 fi
 
 echo "Starting Publishr $1"
-packagr-publishr start --scm github --package_type golang
+packagr-publishr start --scm github --package_type generic
