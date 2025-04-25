@@ -24,6 +24,11 @@ inputs:
     description: 'Template used for updating metadata file'
     required: true
     default: 'version := "%d.%d.%d"'
+  generic_merge_version_file:
+    description: "Don't overwrite the entire version file, but merge using the template pattern"
+    type: boolean
+    required: false
+    default: false
 outputs:
   version: # id of output
     description: 'Version that was written to files'
@@ -36,6 +41,7 @@ runs:
     PACKAGR_ENGINE_GIT_AUTHOR_NAME: ${{ inputs.author_name }}
     PACKAGR_ENGINE_GIT_AUTHOR_EMAIL: ${{ inputs.author_email }}
     PACKAGR_SCM_RELEASE_ASSETS: ${{ inputs.upload_assets }}
+    PACKAGR_GENERIC_MERGE_VERSION_FILE: ${{ inputs.generic_merge_version_file }}
 branding:
   icon: 'package'
   color: 'red'
