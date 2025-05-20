@@ -30,7 +30,7 @@ inputs:
     required: false
     default: false
 outputs:
-  version: # id of output
+  release_version: # id of output
     description: 'Version that was written to files'
 runs:
   using: 'docker'
